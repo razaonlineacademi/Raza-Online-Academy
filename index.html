@@ -1,1 +1,364 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رضا آن لائن اکیڈمی | اردو میں کمپیوٹر اور AI سیکھیں</title>
+<meta name="description" content="رضا آن لائن اکیڈمی: اردو میں کمپیوٹر، Word، AI، Gemini، NotebookLM اور تراث ایپ کے آن لائن کورسز۔ مفت ڈیمو اور استاد سے سوال کی سہولت۔">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
 
+<!-- ═══════════════════════════════════════════════════════════
+     ⚙️ سیٹنگ — یہاں سے سب کچھ بدلیں (صرف "..." کے اندر کا متن بدلیں)
+     ═══════════════════════════════════════════════════════════ -->
+<script>
+const SETTINGS = {
+  academyName: "رضا آن لائن اکیڈمی",
+  teacherName: "ابو محمد",
+  thesisNumber: "923234881662",   // مقالہ جات اور کمپوزنگ کا نمبر (92 کے ساتھ)
+  femaleNumber: "923234881662",   // فی میل ٹیچر کا نمبر (92 کے ساتھ)
+  whatsapp: "923186931263",          // اپنا واٹس ایپ نمبر 92 کے ساتھ، بغیر + اور خالی جگہ کے
+  // ادائیگی کے نمبر — نیا طریقہ شامل کرنے کے لیے ایک لائن کاپی کریں
+  payments: [
+    { name: "جاز کیش (JazzCash)",  number: "03234881662", title: "Atique Rahman" },
+    { name: "ایزی پیسہ (Easypaisa)", number: "03186931263", title: "Atique Rahman" }
+  ],
+  // کورسز — نیا کورس شامل کرنے کے لیے صرف ایک لائن کاپی کریں۔ fee = فیس روپے میں
+  courses: [
+    { icon: "💻", name: "کمپیوٹر کورس",            fee: 1500, intro: "کمپیوٹر کی بنیادی باتیں، Word اور انٹرنیٹ کا استعمال، بالکل شروع سے۔" },
+    { icon: "🕌", name: "اے آئی اسلامی تحقیق",      fee: 500, intro: "اسلامی تحقیق میں Gemini کو شاملہ کے ساتھ جوڑنا، اور AI کے جوابات کو مستند کتابوں سے پرکھنا۔" },
+    { icon: "📓", name: "NotebookLM کورس",         fee: 1000, intro: "اپنی کتابوں اور نوٹس سے سوال پوچھیں، خلاصے اور آڈیو بنائیں۔" },
+    { icon: "🔌", name: "Claude کو شاملہ کے ساتھ جوڑنا", fee: 500, intro: "Claude کو شاملہ سے جوڑ کر کتابوں میں تحقیق آسان اور تیز بنائیں۔" },
+    { icon: "📚", name: "تراث ایپ کورس",       fee: 700, intro: "تراث ایپ کا مکمل استعمال، شروع سے آخر تک آسان اردو میں۔" },
+    // soon: true لکھا ہو تو کورس “جلد آ رہا ہے” دکھاتا ہے۔ کورس شروع ہو تو soon: true ہٹا کر fee میں فیس لکھ دیں
+    { icon: "🔎", name: "کتاب سے مطلوبہ مواد تلاش کرنے کی تربیت", badge: "داخلہ جاری", fee: 700, intro: "کتابوں میں سے اپنی مطلوبہ عبارت اور مواد تیزی سے تلاش کرنے کا طریقہ سیکھیں۔" },
+    { icon: "📖", name: "آن لائن قرآن کریم", badge: "داخلہ جاری", fee: 0, intro: "بچوں اور بالغوں کو ناظرہ قرآن کریم تجوید کے ساتھ پڑھایا جائے گا، اور حفظ بھی کروایا جائے گا۔" },
+    { icon: "🕋", name: "درس نظامی", soon: true, fee: 0, intro: "درس نظامی کا مکمل کورس۔ داخلہ عنقریب شروع ہو گا، ان شاء اللہ۔" },
+    { icon: "🌐", name: "AI ٹول سے ویب سائٹ بنانا", soon: true, fee: 0, intro: "AI ٹولز کی مدد سے اپنی ویب سائٹ بنانا سیکھیں۔" }
+  ],
+  faqs: [
+    { q: "کیا کورس بالکل شروع سے سکھایا جاتا ہے؟", a: "جی ہاں، کسی پچھلے علم کی ضرورت نہیں۔ ہر سبق اردو میں اور آسان انداز میں ہے۔" },
+    { q: "کیا پہلے ڈیمو دیکھ سکتا ہوں؟", a: "جی ہاں، ڈیمو مفت ہے۔ “مفت ڈیمو دیکھیں” کے بٹن سے واٹس ایپ پر ہمیں پیغام بھیجیں۔" },
+    { q: "سمجھ نہ آئے تو کیا کروں؟", a: "گروپ میں یا واٹس ایپ پر استاد سے براہِ راست سوال پوچھ سکتے ہیں۔" },
+    { q: "فیس کیسے بھیجوں؟", a: "کورس کے “داخلہ لیں” بٹن پر کلک کریں، وہاں جاز کیش اور ایزی پیسہ کے نمبر اور پوری ترتیب لکھی ہے۔" }
+  ]
+};
+</script>
+<!-- ═══════════════════ سیٹنگ ختم ═══════════════════ -->
+
+<style>
+:root{
+  --p:#15803d; --on-p:#fff;
+  --bg:#f5f9f6; --card:#fff; --tx:#14231a; --mut:#4d6356; --bd:#dbe6de;
+  --pt:color-mix(in srgb,var(--p) 78%,var(--tx));
+  --soft:color-mix(in srgb,var(--p) 10%,var(--bg));
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e1511;--card:#17211b;--tx:#e8efe9;--mut:#9db1a3;--bd:#2a3a31;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0e1511;--card:#17211b;--tx:#e8efe9;--mut:#9db1a3;--bd:#2a3a31;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Jameel Noori Nastaleeq","Jameel Noori Nastaliq","Noto Nastaliq Urdu",serif;font-size:17px;line-height:2.1;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
+h1,h2,h3{line-height:1.8;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+section{padding:44px 0}
+.sec-title{font-size:26px;font-weight:700;text-align:center;margin-bottom:6px}
+.sec-sub{text-align:center;color:var(--mut);margin:0 0 26px;font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:6px 24px;border-radius:14px;border:2px solid var(--p);background:var(--p);color:var(--on-p);font:inherit;font-weight:600;font-size:16px;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--pt)}
+.btn.block{width:100%}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.soon{font:700 12px system-ui,sans-serif;background:var(--p);color:var(--on-p);border-radius:8px;padding:2px 8px;vertical-align:middle}
+.ltr{direction:ltr;unicode-bidi:isolate}
+@media(min-width:980px){.grid.two{grid-template-columns:repeat(2,1fr)}}
+.btn:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--pt);outline-offset:2px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--bd)}
+.bar{display:flex;align-items:center;gap:14px;min-height:64px}
+.brand{font-weight:700;font-size:18px;white-space:nowrap;text-decoration:none;color:var(--pt)}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+nav::-webkit-scrollbar{display:none}
+nav a{padding:2px 12px;border-radius:10px;text-decoration:none;white-space:nowrap;color:var(--mut);font-size:15px}
+nav a:hover{background:var(--soft);color:var(--pt)}
+
+.hero{padding:48px 0 30px;text-align:center;background:linear-gradient(var(--soft),var(--bg))}
+.hero h1{font-size:clamp(28px,7vw,48px);font-weight:700}
+.hero p{max-width:560px;margin:14px auto 24px;color:var(--mut)}
+.cta{display:flex;flex-direction:column;gap:12px;max-width:340px;margin:0 auto}
+.stats{display:flex;justify-content:center;gap:14px;margin-top:30px}
+.stat{flex:1;max-width:170px;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:10px 8px}
+.stat b{display:block;font-size:30px;color:var(--pt);line-height:1.6}
+.stat span{font-size:14px;color:var(--mut)}
+
+.why{display:grid;gap:14px}
+.why div{background:var(--card);border:1px solid var(--bd);border-right:5px solid var(--p);border-radius:14px;padding:14px 18px}
+.why h3{font-size:19px;color:var(--pt)}
+.why p{margin:0;color:var(--mut);font-size:15px}
+
+.search{width:100%;min-height:54px;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;font-size:16px;padding:6px 18px;margin-bottom:22px}
+.grid{display:grid;gap:16px}
+.course{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.course .ic{font-size:32px;line-height:1.5}
+.course h3{font-size:20px}
+.course p{margin:0;color:var(--mut);font-size:15px;flex:1}
+.fee{font-weight:700;color:var(--pt);font-size:18px;margin:6px 0}
+.empty{text-align:center;color:var(--mut);display:none}
+
+.about{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:26px 20px}
+.avatar{width:84px;height:84px;border-radius:50%;background:var(--p);color:var(--on-p);display:grid;place-items:center;font-size:38px}
+.about p{margin:0;color:var(--mut);max-width:620px}
+
+details{background:var(--card);border:1px solid var(--bd);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:10px 18px;min-height:52px;font-weight:600;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px}
+summary::after{content:"＋";color:var(--pt);font-size:20px}
+details[open] summary::after{content:"－"}
+summary::-webkit-details-marker{display:none}
+details p{margin:0;padding:0 18px 12px;color:var(--mut);font-size:15px}
+
+.contact{text-align:center;background:var(--soft);border-radius:22px;padding:30px 18px}
+.contact p{color:var(--mut);margin:6px 0 18px}
+footer{text-align:center;padding:26px 18px 120px;color:var(--mut);font-size:14px;border-top:1px solid var(--bd)}
+
+.fab{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;border:0;display:grid;place-items:center;font-size:28px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.28);text-decoration:none}
+#wa{left:16px;background:#25d366;color:#fff}
+#themeBtn{right:16px;background:var(--card);border:2px solid var(--bd);line-height:1}
+
+.overlay{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.55);display:none;align-items:flex-end;justify-content:center}
+.overlay.open{display:flex}
+.sheet{background:var(--card);width:100%;max-width:560px;max-height:92vh;overflow:auto;border-radius:22px 22px 0 0;padding:20px 18px calc(22px + env(safe-area-inset-bottom,0px))}
+@media(min-width:700px){.overlay{align-items:center}.sheet{border-radius:22px}}
+.sheet h2{font-size:22px;text-align:center}
+.sheet .close{float:left;min-height:44px;min-width:44px;border-radius:12px;border:1px solid var(--bd);background:transparent;color:var(--tx);font-size:20px;cursor:pointer}
+.chosen{background:var(--soft);border-radius:12px;padding:6px 14px;text-align:center;margin:10px 0;font-weight:600}
+.pay{border:1px solid var(--bd);border-radius:14px;padding:10px 14px;margin:10px 0}
+.pay b{color:var(--pt)}
+.num{display:flex;align-items:center;justify-content:space-between;gap:10px;direction:ltr;margin:4px 0}
+.num span{font-size:22px;font-weight:700;letter-spacing:1px;font-family:system-ui,sans-serif}
+.num .btn{min-height:46px;padding:2px 16px;direction:rtl}
+.note{background:color-mix(in srgb,#f59e0b 16%,var(--card));border-radius:12px;padding:6px 14px;font-size:15px;margin:12px 0}
+.steps{padding:0 22px;margin:10px 0 16px;font-size:15px}
+.steps li{margin-bottom:2px}
+
+.panel{position:fixed;bottom:calc(86px + env(safe-area-inset-bottom,0px));right:16px;z-index:50;width:min(300px,calc(100vw - 32px));background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px;box-shadow:0 8px 28px rgba(0,0,0,.3);display:none}
+.panel.open{display:block}
+.panel h4{margin:0 0 4px;font-size:15px;line-height:1.9}
+.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
+.sw button{height:46px;border-radius:12px;border:3px solid transparent;cursor:pointer}
+.sw button[aria-pressed="true"]{border-color:var(--tx)}
+.custom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-size:15px}
+.custom input{width:64px;height:44px;border:0;padding:0;background:none;cursor:pointer}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.modes button{min-height:46px;border-radius:12px;border:2px solid var(--bd);background:transparent;color:var(--tx);font:inherit;font-size:14px;cursor:pointer}
+.modes button[aria-pressed="true"]{border-color:var(--p);background:var(--soft)}
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:4px 18px;border-radius:12px;z-index:80;font-size:15px;display:none}
+
+@media(min-width:700px){
+  .cta{flex-direction:row;max-width:none;justify-content:center}
+  .cta .btn{min-width:200px}
+  .why{grid-template-columns:repeat(3,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav aria-label="مینو">
+      <a href="#courses">کورسز</a><a href="#services">سہولیات</a><a href="#why">ہمیں کیوں چنیں</a><a href="#about">استاد</a><a href="#faq">سوالات</a><a href="#contact">رابطہ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>اردو میں کمپیوٹر اور AI سیکھیں</h1>
+      <p>آسان اردو میں، قدم بہ قدم، استاد کی رہنمائی کے ساتھ۔ گھر بیٹھے اپنے موبائل یا کمپیوٹر سے سیکھیں۔</p>
+      <div class="cta">
+        <a class="btn" id="demoBtn" href="#" target="_blank" rel="noopener">▶ مفت ڈیمو دیکھیں</a>
+        <a class="btn ghost" href="#courses">داخلہ لیں</a>
+      </div>
+      <div class="stats">
+        
+        <div class="stat"><b id="stCourses"></b><span>کورسز</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="why"><div class="wrap">
+    <h2 class="sec-title">ہمیں کیوں چنیں</h2>
+    <div class="why">
+      <div><h3>اردو میں آسان سبق</h3><p>مشکل انگریزی الفاظ کے بغیر، سیدھی اور سادہ اردو میں ہر بات سمجھائی جاتی ہے۔</p></div>
+      <div><h3>استاد سے سوال</h3><p>کہیں اٹک جائیں تو استاد سے براہِ راست سوال پوچھیں اور جواب پائیں۔</p></div>
+      <div><h3>مفت ڈیمو</h3><p>داخلے سے پہلے ڈیمو دیکھیں، پسند آئے تو ہی کورس لیں۔</p></div>
+    </div>
+  </div></section>
+
+  <section id="courses"><div class="wrap">
+    <h2 class="sec-title">ہمارے کورسز</h2>
+    <p class="sec-sub">اپنی پسند کا کورس تلاش کریں</p>
+    <input class="search" id="q" type="search" placeholder="🔍 کورس تلاش کریں…" aria-label="کورس تلاش کریں">
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty">کوئی کورس نہیں ملا۔ کسی اور لفظ سے تلاش کریں۔</p>
+  </div></section>
+
+  <section id="services"><div class="wrap">
+    <h2 class="sec-title">خصوصی سہولیات</h2>
+    <p class="sec-sub">مقالہ جات اور خواتین کے لیے</p>
+    <div class="grid two">
+      <article class="course"><div class="ic">📝</div><h3>مقالہ جات لکھوانا اور کمپوزنگ</h3><p>بی ایس، ایم اے، ایم فل اور پی ایچ ڈی کے مقالہ جات، نیز مدارس کے مقالات، کسی بھی زبان میں لکھوانے اور کمپوز کروانے کی سہولت دستیاب ہے۔</p><div class="fee">رابطہ: <span class="ltr" id="thNum"></span></div><a class="btn block" id="thBtn" href="#" target="_blank" rel="noopener">💬 مقالے کے لیے رابطہ کریں</a></article>
+      <article class="course"><div class="ic">👩‍🏫</div><h3>خواتین کے لیے فی میل ٹیچر</h3><p>خواتین طالبات کے لیے فی میل ٹیچر دستیاب ہیں۔ کورس یا داخلے کے بارے میں براہِ راست رابطہ کریں۔</p><div class="fee">رابطہ: <span class="ltr" id="feNum"></span></div><a class="btn block" id="feBtn" href="#" target="_blank" rel="noopener">💬 فی میل ٹیچر سے رابطہ کریں</a></article>
+    </div>
+  </div></section>
+
+  <section id="about"><div class="wrap">
+    <h2 class="sec-title">میرے بارے میں</h2><p class="sec-sub"></p>
+    <div class="about">
+      <div class="avatar">👨‍🏫</div>
+      <h3 id="tName"></h3>
+      <p>میں آپ کا استاد ہوں۔ میرا مقصد ہے کہ ہر اردو بولنے والا کمپیوٹر اور AI جیسی جدید چیزیں اپنی زبان میں آسانی سے سیکھ سکے اور انہیں اپنے کام اور دین کی خدمت میں استعمال کر سکے۔</p>
+    </div>
+  </div></section>
+
+  <section id="faq"><div class="wrap">
+    <h2 class="sec-title">اکثر پوچھے جانے والے سوالات</h2><p class="sec-sub"></p>
+    <div id="faqList"></div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact">
+      <h2 class="sec-title">رابطہ کریں</h2>
+      <p>کوئی سوال ہو یا داخلہ لینا ہو؟ واٹس ایپ پر ہمیں پیغام بھیجیں۔</p>
+      <a class="btn" id="contactWa" href="#" target="_blank" rel="noopener">💬 واٹس ایپ پر پیغام بھیجیں</a>
+    </div>
+  </div></section>
+</main>
+
+<footer id="foot"></footer>
+
+<a class="fab" id="wa" href="#" target="_blank" rel="noopener" aria-label="واٹس ایپ">💬</a>
+<button class="fab" id="themeBtn" aria-label="رنگ اور موڈ" aria-expanded="false">🎨</button>
+
+<div class="panel" id="panel" role="dialog" aria-label="رنگ اور موڈ">
+  <h4>تیار رنگ</h4>
+  <div class="sw" id="sw"></div>
+  <label class="custom"><span>اپنی مرضی کا رنگ</span><input type="color" id="customColor" value="#15803d"></label>
+  <h4>موڈ</h4>
+  <div class="modes" id="modes">
+    <button data-m="light">☀️ دن</button><button data-m="dark">🌙 رات</button><button data-m="auto">🔄 خودکار</button>
+  </div>
+</div>
+
+<div class="overlay" id="ov" role="dialog" aria-modal="true" aria-labelledby="ovTitle">
+  <div class="sheet">
+    <button class="close" id="ovClose" aria-label="بند کریں">✕</button>
+    <h2 id="ovTitle">داخلہ اور ادائیگی</h2>
+    <div class="chosen" id="chosen"></div>
+    <div id="payList"></div>
+    <div class="note">⚠️ پیسے بھیجنے سے پہلے نمبر کے ساتھ اکاؤنٹ ٹائٹل کا نام ضرور دیکھ لیں، اور نام درست ہو تو ہی رقم بھیجیں۔</div>
+    <ol class="steps">
+      <li>اوپر سے اپنا کورس چنیں۔</li>
+      <li>کورس کی فیس جاز کیش یا ایزی پیسہ پر بھیجیں۔</li>
+      <li>ادائیگی کا اسکرین شاٹ واٹس ایپ پر بھیجیں۔</li>
+      <li>تصدیق کے بعد آپ کو کورس کا لنک یا گروپ میں داخلہ مل جائے گا۔</li>
+    </ol>
+    <a class="btn block" id="sendWa" href="#" target="_blank" rel="noopener">📤 واٹس ایپ پر اسکرین شاٹ بھیجیں</a>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var S = SETTINGS, $ = function(id){return document.getElementById(id)};
+  var wa = function(msg){return "https://wa.me/"+S.whatsapp+"?text="+encodeURIComponent(msg)};
+  var fmt = function(n){return Number(n).toLocaleString("en-US")};
+
+  /* ---------- مواد ---------- */
+  document.title = S.academyName+" | اردو میں کمپیوٹر اور AI سیکھیں";
+  $("brand").textContent = "🎓 "+S.academyName;
+  $("stCourses").textContent = S.courses.filter(function(c){return !c.soon}).length;
+  $("tName").textContent = "استاد "+S.teacherName;
+  $("foot").textContent = "© "+new Date().getFullYear()+" "+S.academyName+"۔ تمام حقوق محفوظ ہیں۔";
+  $("wa").href = wa("السلام علیکم، مجھے ایک سوال پوچھنا ہے۔");
+  $("contactWa").href = wa("السلام علیکم، مجھے آپ کی اکیڈمی کے بارے میں معلومات چاہیے۔");
+  $("demoBtn").href = wa("السلام علیکم، میں مفت ڈیمو دیکھنا چاہتا ہوں۔");
+  var to = function(n,m){return "https://wa.me/"+n+"?text="+encodeURIComponent(m)}, loc = function(n){return "0"+n.slice(2)};
+  $("thNum").textContent = loc(S.thesisNumber); $("feNum").textContent = loc(S.femaleNumber);
+  $("thBtn").href = to(S.thesisNumber, "السلام علیکم، مجھے مقالہ لکھوانے / کمپوزنگ کی سہولت چاہیے۔\nمقالے کی قسم (بی ایس / ایم اے / ایم فل / پی ایچ ڈی / مدرسہ): \nموضوع: \nزبان: \nجمع کرانے کی آخری تاریخ: \nمیرا نام: ");
+  $("feBtn").href = to(S.femaleNumber, "السلام علیکم، میں خاتون ہوں اور فی میل ٹیچر سے کورس کے بارے میں رابطہ کرنا چاہتی ہوں۔\nمیرا نام: ");
+  $("faqList").innerHTML = S.faqs.map(function(f){return "<details><summary>"+f.q+"</summary><p>"+f.a+"</p></details>"}).join("");
+
+  /* ---------- کورسز اور تلاش ---------- */
+  var grid = $("grid");
+  grid.innerHTML = S.courses.map(function(c,i){
+    return '<article class="course" data-t="'+(c.name+" "+c.intro).toLowerCase()+'"><div class="ic">'+c.icon+'</div><h3>'+c.name+(c.badge||c.soon?' <small class="soon">'+(c.badge||'Soon')+'</small>':'')+'</h3><p>'+c.intro+'</p>'+(c.soon?'<div class="fee">فیس: جلد آ رہا ہے (Soon)</div><button class="btn block" disabled>⏳ جلد آ رہا ہے</button>':(!c.fee?'<div class="fee">فیس: رابطہ کریں</div><a class="btn block" target="_blank" rel="noopener" href="'+wa("السلام علیکم، مجھے "+c.name+" میں داخلہ لینا ہے۔ میرا نام: ")+'">داخلہ لیں</a>':'<div class="fee">فیس: '+fmt(c.fee)+' روپے</div><button class="btn block" data-i="'+i+'">داخلہ لیں</button>'))+'</article>';
+  }).join("");
+  $("q").addEventListener("input", function(){
+    var v = this.value.trim().toLowerCase(), n = 0;
+    grid.querySelectorAll(".course").forEach(function(el){
+      var ok = !v || el.dataset.t.indexOf(v) > -1;
+      el.style.display = ok ? "" : "none"; if(ok) n++;
+    });
+    $("empty").style.display = n ? "none" : "block";
+  });
+
+  /* ---------- ادائیگی ---------- */
+  var cur = null, toastT;
+  function toast(t){var e=$("toast");e.textContent=t;e.style.display="block";clearTimeout(toastT);toastT=setTimeout(function(){e.style.display="none"},1800)}
+  function copy(txt){
+    function fb(){var t=document.createElement("textarea");t.value=txt;t.style.cssText="position:fixed;opacity:0";document.body.appendChild(t);t.select();try{document.execCommand("copy");toast("نمبر کاپی ہو گیا ✓")}catch(e){toast("کاپی نہیں ہو سکا، نمبر خود لکھ لیں")}document.body.removeChild(t)}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast("نمبر کاپی ہو گیا ✓")},fb)}else fb();
+  }
+  $("payList").innerHTML = S.payments.map(function(p){
+    return '<div class="pay"><b>'+p.name+'</b><div class="num"><span>'+p.number+'</span><button class="btn ghost" data-copy="'+p.number+'">کاپی</button></div><div>اکاؤنٹ ٹائٹل: <b style="direction:ltr;unicode-bidi:isolate">'+p.title+'</b></div></div>';
+  }).join("");
+  $("payList").addEventListener("click", function(e){var b=e.target.closest("[data-copy]");if(b)copy(b.dataset.copy)});
+  function openPay(i){
+    cur = S.courses[i];
+    $("chosen").textContent = cur.name+" — فیس "+fmt(cur.fee)+" روپے";
+    $("sendWa").href = wa("السلام علیکم، میں نے "+cur.name+" کی فیس بھیج دی ہے، اسکرین شاٹ ساتھ ہے۔ میرا نام: ");
+    $("ov").classList.add("open"); document.body.style.overflow="hidden";
+  }
+  function closePay(){$("ov").classList.remove("open");document.body.style.overflow=""}
+  grid.addEventListener("click", function(e){var b=e.target.closest("[data-i]");if(b)openPay(+b.dataset.i)});
+  $("ovClose").onclick = closePay;
+  $("ov").addEventListener("click", function(e){if(e.target===this)closePay()});
+  document.addEventListener("keydown", function(e){if(e.key==="Escape"){closePay();$("panel").classList.remove("open")}});
+
+  /* ---------- رنگ اور موڈ ---------- */
+  var COLORS = [["سبز","#15803d"],["زمردی","#059669"],["نیلا","#2563eb"],["جامنی","#7c3aed"],["گلابی","#db2777"],["نارنجی","#ea580c"],["سرخ","#dc2626"],["فیروزی","#0891b2"]];
+  var KEY = "raza-academy-theme", st = {c:"#15803d", m:"auto"};
+  try{var raw=localStorage.getItem(KEY); if(raw){var o=JSON.parse(raw); if(o&&/^#[0-9a-f]{6}$/i.test(o.c))st.c=o.c; if(o&&["light","dark","auto"].indexOf(o.m)>-1)st.m=o.m}}catch(e){}
+  function lum(h){var r=parseInt(h.substr(1,2),16),g=parseInt(h.substr(3,2),16),b=parseInt(h.substr(5,2),16);return (0.299*r+0.587*g+0.114*b)/255}
+  function apply(save){
+    var r=document.documentElement;
+    r.style.setProperty("--p", st.c);
+    r.style.setProperty("--on-p", lum(st.c)>0.62 ? "#10231a" : "#fff");
+    if(st.m==="auto") r.removeAttribute("data-theme"); else r.setAttribute("data-theme", st.m);
+    $("customColor").value = st.c;
+    document.querySelectorAll("#sw button").forEach(function(b){b.setAttribute("aria-pressed", b.dataset.c===st.c)});
+    document.querySelectorAll("#modes button").forEach(function(b){b.setAttribute("aria-pressed", b.dataset.m===st.m)});
+    if(save){try{localStorage.setItem(KEY, JSON.stringify(st))}catch(e){}}
+  }
+  $("sw").innerHTML = COLORS.map(function(c){return '<button style="background:'+c[1]+'" data-c="'+c[1]+'" aria-label="'+c[0]+'" aria-pressed="false"></button>'}).join("");
+  $("sw").addEventListener("click", function(e){var b=e.target.closest("button");if(b){st.c=b.dataset.c;apply(true)}});
+  $("customColor").addEventListener("input", function(){st.c=this.value;apply(true)});
+  $("modes").addEventListener("click", function(e){var b=e.target.closest("button");if(b){st.m=b.dataset.m;apply(true)}});
+  $("themeBtn").onclick = function(){var p=$("panel");var o=p.classList.toggle("open");this.setAttribute("aria-expanded",o)};
+  apply(false);
+})();
+</script>
+</body>
+</html>
